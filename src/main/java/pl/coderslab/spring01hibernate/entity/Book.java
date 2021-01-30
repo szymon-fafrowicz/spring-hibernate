@@ -36,7 +36,18 @@ public class Book {
 
     @Min(1)
     private int pages;
+    @ManyToOne
+    private Category category;
 
+
+    public Book setCategory(Category category) {
+        this.category = category;
+        return this;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
 
     public Book setPages(int pages) {
         this.pages = pages;
@@ -114,6 +125,7 @@ public class Book {
                 ", publisher=" + publisher +
                 ", authors=" + authors +
                 ", pages=" + pages +
+                ", category=" + category +
                 '}';
     }
 }

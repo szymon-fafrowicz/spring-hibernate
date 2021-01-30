@@ -21,7 +21,7 @@
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQL57Dialect"/>
             <property name="hibernate.connection.characterEncoding" value="utf8"/>
-
+            <property name="javax.persistence.sql-load-script-source" value="META-INF/data.sql" />
 
         </properties>
     </persistence-unit>
